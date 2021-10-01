@@ -17,11 +17,11 @@ class PersonRemoteDataSourceImpl implements PersonRemoteDataSource {
 
   @override
   Future<List<PersonModel>> getAllPersons(int page) => _getPersonFromUrl(
-      'https://rickandmotryapi.com/api/character/?page=$page');
+      'https://rickandmortyapi.com/api/character/?page=$page');
 
   @override
   Future<List<PersonModel>> searchPerson(String query) => _getPersonFromUrl(
-      'https://rickandmotryapi.com/api/character/?page=$query');
+      'https://rickandmortyapi.com/api/character/?page=$query');
 
   Future<List<PersonModel>> _getPersonFromUrl(String url) async {
     final response = await client.get(
